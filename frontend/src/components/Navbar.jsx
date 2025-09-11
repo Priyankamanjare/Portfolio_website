@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import logo from '../assets/kevinRushLogo.png'
-import { LuInstagram } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
