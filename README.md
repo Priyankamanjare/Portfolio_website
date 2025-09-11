@@ -21,16 +21,16 @@ It showcases my projects, skills, and journey as a developer. Built with **React
 ![Home Screenshot](./frontend/screenshots/home.png)
 
 ### 💼 Projects Section  
-![Projects Screenshot](./screenshots/projects.png)
+![Projects Screenshot](./frontend/screenshots/projects.png)
 
 ### 🛠️ Skills Section  
-![Skills Screenshot](./screenshots/skills.png)
+![Skills Screenshot](./frontend/screenshots/skills.png)
 
 ### 🛠️ Experience Section  
-![Skills Screenshot](./screenshots/experience.png)
+![Experience Screenshot](./frontend/screenshots/experience.png)
 
 ### 🛠️ Contact Section  
-![Skills Screenshot]([./screenshots/contact.png](https://github.com/Priyankamanjare/Portfolio_website/blob/main/frontend/screenshots/contact.png))
+![Contact Screenshot]([./frontend/screenshots/contact.png))
 
 ---
 
