@@ -1,12 +1,17 @@
 import project1 from "../assets/projects/Music_player.png";
-import project2 from "../assets/projects/stopwatch.png";
+import Flavorly from "../assets/projects/Flavorly.jpg";
 import project3 from "../assets/projects/weather.png";
 import project4 from "../assets/projects/ui_ux.png";
 import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
+import { DiNodejs } from "react-icons/di";
 import { TbBrandCpp } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaFigma } from "react-icons/fa";
+import { FaJs } from "react-icons/fa";
 
 export const HERO_CONTENT = `I’m a driven BE-IT student with a passion for UI/UX design and full-stack development. My journey so far includes hands-on experience with building interactive user interfaces and scalable web applications.
 
@@ -53,6 +58,20 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    name: "Flavorly",
+    image: Flavorly,
+    description: `Flavorly is a modern, responsive food ordering platform designed to provide users with a smooth and intuitive experience for browsing restaurants and placing orders online. The platform focuses on clean UI, fast navigation, and real-time order updates to enhance the overall food ordering experience.`,
+    technologies: ["React", "Tailwind CSS", "Appwrite"],
+    features: [
+      "Show categories (Starters, Main Course, Desserts, Drinks) with images and prices.",
+      "Add to cart + fake checkout system",
+      "Minimalist and responsive UI"
+    ],
+    repository: "https://github.com/username/stopwatch-app",
+    liveDemo: "https://username.github.io/stopwatch-app",
+    span:"col-span-3"
+  },
+  {
     name: "Music Player",
     image: project1,
     description: `A dynamic and interactive music player web application with a sleek user interface. Users can play, pause, skip tracks, and control the volume.`,
@@ -64,25 +83,14 @@ export const PROJECTS = [
       "Responsive design for desktop and mobile"
     ],
     repository: "https://github.com/username/music-player",
-    liveDemo: "https://username.github.io/music-player"
+    liveDemo: "https://username.github.io/music-player",
+    span:"col-span-2"
   },
-  {
-    name: "Stopwatch",
-    image: project2,
-    description: `A simple yet efficient stopwatch application built for tracking time with precision. Includes start, pause, reset, and lap functionalities.`,
-    technologies: ["React", "Tailwind CSS"],
-    features: [
-      "Lap timer with timestamps",
-      "Keyboard shortcuts for control",
-      "Minimalist and responsive UI"
-    ],
-    repository: "https://github.com/username/stopwatch-app",
-    liveDemo: "https://username.github.io/stopwatch-app"
-  },
+  
   {
     name: "Weather App",
     image: project3,
-    description: `A weather forecasting application that provides current weather data and a 7-day forecast for any location worldwide.`,
+    description: `A responsive and user-friendly weather application that provides real-time weather updates for any location worldwide. It fetches accurate weather data using an API and displays key details like temperature, humidity, wind speed, and forecasts. The app includes a clean UI with dynamic backgrounds that change based on the current weather conditions.`,
     technologies: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
     features: [
       "Search functionality by city or zip code",
@@ -91,7 +99,8 @@ export const PROJECTS = [
       "User-friendly and fully responsive design"
     ],
     repository: "https://github.com/username/weather-app",
-    liveDemo: "https://username.github.io/weather-app"
+    liveDemo: "https://username.github.io/weather-app",
+    span:"col-span-3"
   },
   {
     name: "UI/UX Landing Page for Project Building Company",
@@ -105,7 +114,8 @@ export const PROJECTS = [
       "Interactive service cards"
     ],
     repository: "https://github.com/username/project-landing-page",
-    liveDemo: "https://username.github.io/project-landing-page"
+    liveDemo: "https://username.github.io/project-landing-page",
+    span:"col-span-2"
   }
 ];
 
@@ -117,9 +127,19 @@ export const CONTACT = {
 };
 
 export const SKILLS = [
-  { name: "React", icon: <FaReact className="text-4xl text-cyan-400" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-4xl text-lime-400" /> },
-  { name: "C++", icon: <TbBrandCpp className="text-4xl text-slate-50" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-4xl text-green-600" /> },
-  { name: "MySQL", icon: <SiMysql className="text-4xl text-cyan-700" /> },
-];
+  { name: "React", icon: <FaReact className="text-2xl md:text-4xl  text-cyan-400" /> },
+  { name: "Node.js", icon: <DiNodejs className="text-2xl md:text-4xl text-lime-400" /> },
+  { name: "C++", icon: <TbBrandCpp className="text-2xl md:text-4xl  text-slate-50" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-2xl md:text-4xl  text-green-600" /> },
+  { name: "MySQL", icon: <SiMysql className="text-2xl md:text-4xl  text-cyan-300 " /> },
+  { name: "Github", icon: <FaGithub className="text-2xl md:text-4xl  text-slate-300 " /> },
+  { name: "HTML", icon: <FaHtml5 className="text-2xl md:text-2xl  text-orange-300 " /> },
+  { name: "TailwindCSS", icon: <RiTailwindCssFill className="text-2xl md:text-4xl  text-teal-300 " /> },
+  { name: "Figma", icon: <FaFigma className="text-2xl md:text-4xl  text-slate-300 " /> },
+  { name: "JS", icon: <FaJs className="text-2xl md:text-4xl  text-yellow-300 " /> },
+
+
+
+
+]
+

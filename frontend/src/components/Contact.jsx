@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-b border-neutral-800 ">
+    <div id="contact" className="border-b border-neutral-800 ">
       {/* Floating Notification */}
       <AnimatePresence>
         {showNotification && (
@@ -48,26 +48,26 @@ const Contact = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-neutral-900 text-white px-6 py-3 rounded-xl shadow-lg border border-pink-700"
+            className="fixed top-6 transform -translate-x-1/2 z-50 bg-neutral-900 text-white px-6 py-3 rounded-xl shadow-lg border border-purple-700"
           >
             {status}
           </motion.div>
         )}
       </AnimatePresence>
-      <h1 className="text-4xl text-center my-10 font-light">Get in Touch</h1>
+      <h1 className="text-2xl text-center my-5 text-slate-300 ">Get in Touch</h1>
       <div className="flex justify-center items-center">
         <div className="inline-block mx-auto text-center p-5">
-          <h1 className="text-2xl font-bold"> Priyanka Vishnu Manjare</h1>
-          <p className="my-3">priyankamanjare05@gmail.com</p>
-          <p className="underline offset-4">+91 8625091972</p>
-          <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto">
+          <h1 className="text-2xl font-bold text-slate-100"> Priyanka Vishnu Manjare</h1>
+          <p className="my-3 text-slate-200">priyankamanjare05@gmail.com</p>
+          <p className="underline offset-4 text-slate-200">+91 8625091972</p>
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto ">
             <input
               type="text"
               name="name"
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 rounded-2xl border border-neutral-700  bg-neutral-900 text-white focus:outline-none focus:border-blue-500"
+              className="w-full p-3 rounded-2xl border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border appearance-none bg-clip-padding focus:outline-none focus:ring-0 shadow-none relative z-10"
               required
             />
             <input
@@ -76,7 +76,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border rounded-2xl border-neutral-700  bg-neutral-900 text-white focus:outline-none focus:border-blue-500"
+              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border appearance-none bg-clip-padding focus:outline-none focus:ring-0 shadow-none relative z-10"
               required
             />
             <textarea
@@ -84,13 +84,14 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border rounded-2xl border-neutral-700 bg-neutral-900 text-white focus:outline-none focus:border-blue-500"
+              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border appearance-none bg-clip-padding focus:outline-none focus:ring-0 shadow-none relative z-10"
               rows={4}
               required
             />
             <button
               type="submit"
-              className="w-full border border-neutral-700  bg-gradient-to-b from-red-950 via-pink-900 to-pink-600  font-semibold py-2 px-4 rounded-2xl"
+              className="w-full border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border font-semibold p-3 rounded-2xl shadow-lg focus:outline-none focus:ring-0 relative z-10
+              hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300"
             >
               Send Message
             </button>

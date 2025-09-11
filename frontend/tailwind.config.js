@@ -9,8 +9,17 @@ export default {
       screens: {
         xs: ''
       },
+       keyframes: {
+    scroll: {
+      '0%': { transform: 'translateX(0)' },
+      '100%': { transform: 'translateX(-50%)' },
     },
   },
-  plugins: [],
+  animation: {
+    scroll: 'scroll 15s linear infinite',
+  },
+    },
+  },
+  plugins: [require("tailwind-scrollbar-hide")],
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import aboutPic from "../assets/about.jpg"
-import { ABOUT_TEXT } from "../constants";
+import { ABOUT_TEXT } from "../constants/index.jsx";
 
 const About = () => {
   return (
