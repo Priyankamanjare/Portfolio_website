@@ -30,7 +30,7 @@ It showcases my projects, skills, and journey as a developer. Built with **React
 ![Skills Screenshot](./screenshots/experience.png)
 
 ### 🛠️ Contact Section  
-![Skills Screenshot](./screenshots/contact.png)
+![Skills Screenshot]([./screenshots/contact.png](https://github.com/Priyankamanjare/Portfolio_website/blob/main/frontend/screenshots/contact.png))
 
 ---
 
