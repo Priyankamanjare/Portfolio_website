@@ -18,7 +18,7 @@ It showcases my projects, skills, and journey as a developer. Built with **React
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page  
-![Home Screenshot](./screenshots/home.png)
+![Home Screenshot](./frontend/screenshots/home.png)
 
 ### 💼 Projects Section  
 ![Projects Screenshot](./screenshots/projects.png)
