@@ -30,7 +30,7 @@ It showcases my projects, skills, and journey as a developer. Built with **React
 ![Experience Screenshot](./frontend/screenshots/experience.png)
 
 ### 🛠️ Contact Section  
-![Contact Screenshot]([./frontend/screenshots/contact.png))
+![Contact Screenshot](./frontend/screenshots/contact.png)
 
 ---
 
