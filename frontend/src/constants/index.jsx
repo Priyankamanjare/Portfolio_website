@@ -1,7 +1,8 @@
 import project1 from "../assets/projects/Music_player.png";
-import Flavorly from "../assets/projects/Flavorly.jpg";
+import Flavorly from "../assets/projects/Flavorly.png";
 import project3 from "../assets/projects/weather.png";
 import project4 from "../assets/projects/ui_ux.png";
+import Recipe from "../assets/projects/Recipe.png"
 import { FaReact } from "react-icons/fa";
 import { DiNodejs } from "react-icons/di";
 import { TbBrandCpp } from "react-icons/tb";
@@ -67,8 +68,38 @@ export const PROJECTS = [
       "Add to cart + fake checkout system",
       "Minimalist and responsive UI"
     ],
-    repository: "https://github.com/username/stopwatch-app",
-    liveDemo: "https://username.github.io/stopwatch-app",
+    repository: "https://github.com/Priyankamanjare/Food_ordering_app",
+    liveDemo: "https://food-ordering-app-nu-fawn.vercel.app/",
+    span:"col-span-3"
+  },
+   
+  {
+    name: "Weather App",
+    image: project3,
+    description: `A responsive and user-friendly weather application that provides real-time weather updates for any location worldwide. It fetches accurate weather data using an API and displays key details like temperature, humidity, wind speed, and forecasts. The app includes a clean UI with dynamic backgrounds that change based on the current weather conditions.`,
+    technologies: ["React", "TailWindCSS", "OpenWeather API"],
+    features: [
+      "Search functionality by city or zip code",
+      "Temperature conversion (Celsius/Fahrenheit)",
+      "Background changes based on weather conditions",
+      "User-friendly and fully responsive design"
+    ],
+    repository: "https://github.com/Priyankamanjare/Weather-app",
+    liveDemo: "https://weather-app-flax-mu-68.vercel.app/",
+    span:"col-span-3"
+  },
+   
+  {
+    name: "Recipe Finder",
+    image: Recipe,
+    description: `Recipe Finder helps you discover delicious recipes by simply searching with ingredients. Browse detailed instructions, ingredients, and images — making cooking easy and fun.`,
+    technologies: ["React", "TailWindCSS", "TheMealDB API"],
+    features: [
+      "Search Recipes by Name – Enter any dish name and instantly get matching recipes.",
+      "Detailed Recipe View – Click on a recipe to see full instructions, ingredients, and measures.",
+       ],
+    repository: "https://github.com/Priyankamanjare/RecipeFinder",
+    liveDemo: "https://recipe-finder-pi-gold.vercel.app/",
     span:"col-span-3"
   },
   {
@@ -86,22 +117,7 @@ export const PROJECTS = [
     liveDemo: "https://username.github.io/music-player",
     span:"col-span-2"
   },
-  
-  {
-    name: "Weather App",
-    image: project3,
-    description: `A responsive and user-friendly weather application that provides real-time weather updates for any location worldwide. It fetches accurate weather data using an API and displays key details like temperature, humidity, wind speed, and forecasts. The app includes a clean UI with dynamic backgrounds that change based on the current weather conditions.`,
-    technologies: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
-    features: [
-      "Search functionality by city or zip code",
-      "Temperature conversion (Celsius/Fahrenheit)",
-      "Background changes based on weather conditions",
-      "User-friendly and fully responsive design"
-    ],
-    repository: "https://github.com/username/weather-app",
-    liveDemo: "https://username.github.io/weather-app",
-    span:"col-span-3"
-  },
+ 
   {
     name: "UI/UX Landing Page for Project Building Company",
     image: project4,

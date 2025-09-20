@@ -13,7 +13,7 @@ const Experience = () => {
         <h1 className="md:text-2xl text-xl  text-slate-100 text-start px-2">Experience</h1>
         <div className="flex-1 h-[1px] bg-purple-700 mx-4"></div>
       </div>
-      <div className="relative grid grid-cols-2 md:grid-cols-2 gap-4">
+      <div className="relative grid grid-cols-1  sm:grid-cols-2 gap-4">
 
 
         {EXPERIENCES.map((exp) => (
