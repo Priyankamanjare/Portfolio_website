@@ -113,8 +113,8 @@ export const PROJECTS = [
       "Real-time audio visualization",
       "Responsive design for desktop and mobile"
     ],
-    repository: "https://github.com/username/music-player",
-    liveDemo: "https://username.github.io/music-player",
+    repository: "https://github.com/Priyankamanjare/Music-player",
+    // liveDemo: "https://username.github.io/music-player",
     span:"col-span-2"
   },
  
@@ -129,8 +129,8 @@ export const PROJECTS = [
       "Testimonial slider",
       "Interactive service cards"
     ],
-    repository: "https://github.com/username/project-landing-page",
-    liveDemo: "https://username.github.io/project-landing-page",
+    // repository: "https://github.com/username/project-landing-page",
+    // liveDemo: "https://username.github.io/project-landing-page",
     span:"col-span-2"
   }
 ];
