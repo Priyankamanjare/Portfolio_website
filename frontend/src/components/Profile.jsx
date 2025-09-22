@@ -9,7 +9,7 @@ const Profile = () => {
         <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
     </div>{" "}
 
-    <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <div className="mx-auto max-w-7xl px-2 lg:px-8">
       <div className="flex flex-col items-center gap-10 py-8 md:py-12 md:flex-row lg:gap-16 lg:py-16">
         <motion.div
           className="w-full lg:mt-16 lg:w-1/2 flex justify-center"

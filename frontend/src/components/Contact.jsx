@@ -1,14 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const Contact = () => {
-  const [formData, setFormData] = useState({name:"", email:"", message:""});
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
   const [showNotification, setShowNotification] = useState(false);
 
-  const handleChange=(e)=> {
-    setFormData({ ...formData, [e.target.name]: e.target.value});
+  // ---- Vanta Setup ----
+  const vantaRef = useRef(null);
+  const [vantaEffect, setVantaEffect] = useState(null);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        window.VANTA.NET({
+          el: vantaRef.current,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x453447, // wave color
+          backgroundColor: 0x0, // black background
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
+  // ---------------------
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -34,14 +60,14 @@ const Contact = () => {
       console.error(err);
       setStatus("Something went wrong!");
     }
-    setShowNotification(true);
     setTimeout(() => setShowNotification(false), 7000);
   };
 
   return (
     <motion.div
       id="contact"
-      className="border-b border-neutral-800 "
+      ref={vantaRef} // <-- attach Vanta here
+      className="border-b border-neutral-800 relative overflow-hidden"
       initial={{ x: 100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -61,20 +87,22 @@ const Contact = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <h1 className="text-2xl text-center my-5 text-slate-300 ">Get in Touch</h1>
-      <div className="flex justify-center items-center">
+
+      {/* Contact Content */}
+      <div className="relative z-10 flex flex-col justify-center items-center py-14">
+        <h1 className="text-2xl text-center my-5 text-slate-300">Get in Touch</h1>
         <div className="inline-block mx-auto text-center p-5">
-          <h1 className="text-2xl font-bold text-slate-100"> Priyanka Vishnu Manjare</h1>
+          <h1 className="text-2xl font-bold text-slate-100">Priyanka Vishnu Manjare</h1>
           <p className="my-3 text-slate-200">priyankamanjare05@gmail.com</p>
           <p className="underline offset-4 text-slate-200">+91 8625091972</p>
-          <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto ">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto">
             <input
               type="text"
               name="name"
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 rounded-2xl border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border appearance-none bg-clip-padding focus:outline-none focus:ring-0 shadow-none relative z-10"
+              className="w-full p-3 rounded-2xl border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] relative z-10"
               required
             />
             <input
@@ -83,7 +111,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border appearance-none bg-clip-padding focus:outline-none focus:ring-0 shadow-none relative z-10"
+              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br relative z-10"
               required
             />
             <textarea
@@ -91,21 +119,20 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border appearance-none bg-clip-padding focus:outline-none focus:ring-0 shadow-none relative z-10"
+              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br relative z-10"
               rows={4}
               required
             />
             <button
               type="submit"
-              className="w-full border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] bg-origin-border font-semibold p-3 rounded-2xl shadow-lg focus:outline-none focus:ring-0 relative z-10
-              hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300"
+              className="w-full border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br font-semibold p-3 rounded-2xl shadow-lg relative z-10 hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300"
             >
               Send Message
             </button>
           </form>
         </div>
       </div>
-  </motion.div>
+    </motion.div>
   );
 };
 
