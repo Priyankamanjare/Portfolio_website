@@ -94,7 +94,7 @@ const Contact = () => {
         <div className="inline-block mx-auto text-center p-5">
           <h1 className="text-2xl font-bold text-slate-100">Priyanka Vishnu Manjare</h1>
           <p className="my-3 text-slate-200">priyankamanjare05@gmail.com</p>
-          <p className="underline offset-4 text-slate-200">+91 8625091972</p>
+          {/* <p className="underline offset-4 text-slate-200"></p> */}
           <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto">
             <input
               type="text"
