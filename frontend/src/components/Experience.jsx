@@ -1,10 +1,17 @@
+
 import React from "react";
 import { EXPERIENCES } from "../constants/index.jsx";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-
-    <div className="pb-10">
+    <motion.div
+      className="pb-10"
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
        <div className="relative h-full w-full bg-slate-950">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"></div>
         <div className="absolute bottom-0 right-[-20%] top-[10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"></div>
@@ -48,7 +55,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </div>
+  </motion.div>
   );
 };
 

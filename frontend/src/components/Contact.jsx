@@ -39,7 +39,14 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="border-b border-neutral-800 ">
+    <motion.div
+      id="contact"
+      className="border-b border-neutral-800 "
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       {/* Floating Notification */}
       <AnimatePresence>
         {showNotification && (
@@ -98,7 +105,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+  </motion.div>
   );
 };
 
