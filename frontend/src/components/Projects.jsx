@@ -62,6 +62,10 @@ const Projects = () => {
             </div>
 
             {/* Name below image */}
+            {/* Mobile-only: Tap to know more */}
+            <div className="block md:hidden mt-2 text-center">
+              <span className="text-xs text-purple-300 bg-black/30 px-2 py-1 rounded-full">Tap to know more</span>
+            </div>
             <h3 className="mt-3 text-center text-slate-100 text-sm font-medium">{item.name}</h3>
           </div>
         ))}

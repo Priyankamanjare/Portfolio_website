@@ -26,7 +26,7 @@ const Technologies = () => {
             I love experimenting with modern frontend stacks — from clean React UIs to playful animations. Here’s what I’ve been working with lately:
           </p>
         </div>
-      <div className="px-4 ">
+      <div className="">
         {/* 3D-style black container with title inside */}
         <div className="relative rounded-2xl bg-black/70 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur p-6  overflow-hidden">
           {/* subtle glow accents */}

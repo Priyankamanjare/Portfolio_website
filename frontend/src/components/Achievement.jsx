@@ -4,8 +4,8 @@ import { achievements } from "../constants/index.jsx";
 
 const Achievement = () => {
   return (
-    <section id="achievements" className="py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="achievements" className="py-12">
+      <div className="max-w-5xl mx-auto ">
         <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center mb-6">Achievements</h2>
         <div className="flex justify-center">
           <p className="text-slate-400 text-center max-w-2xl mb-10 text-base md:text-lg">

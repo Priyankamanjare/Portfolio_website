@@ -93,7 +93,8 @@ const Profile = () => {
               Hi, I am
             </span>
             <motion.h1
-              className="font-bold tracking-tighter text-3xl lg:text-6xl text-purple-900 text-center lg:text-left"
+              className="font-bold tracking-tighter text-3xl lg:text-6xl bg-gradient-to-br from-purple-500/60 via-fuchsia-500/60 to-pink-500/60 bg-clip-text text-transparent text-center lg:text-left"
+              style={{ WebkitTextFillColor: 'transparent', color: '#1a0033' }}
               variants={containerVariants}
               initial="hidden"
               animate="visible"
