@@ -96,39 +96,47 @@ const Contact = () => {
           <p className="my-3 text-slate-200">priyankamanjare05@gmail.com</p>
           {/* <p className="underline offset-4 text-slate-200"></p> */}
           <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-3 rounded-2xl border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br from-[#0f001a] via-[#140021] to-[#1a0033] relative z-10"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br relative z-10"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-2xl border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br relative z-10"
-              rows={4}
-              required
-            />
-            <button
-              type="submit"
-              className="w-full border border-purple-700 text-slate-100 bg-[#140021] bg-gradient-to-br font-semibold p-3 rounded-2xl shadow-lg relative z-10 hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300"
-            >
-              Send Message
-            </button>
+            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full p-3 rounded-2xl bg-black text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-700/40 placeholder:text-slate-400 border-none"
+                required
+              />
+            </div>
+            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-3 rounded-2xl bg-black text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-700/40 placeholder:text-slate-400 border-none"
+                required
+              />
+            </div>
+            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full p-3 rounded-2xl bg-black text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-700/40 placeholder:text-slate-400 border-none"
+                rows={4}
+                required
+              />
+            </div>
+            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
+              <button
+                type="submit"
+                className="w-full font-semibold p-3 rounded-2xl shadow-lg relative z-10 hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300 bg-black text-slate-100 border-none"
+              >
+                Send Message
+              </button>
+            </div>
           </form>
         </div>
       </div>

@@ -4,94 +4,68 @@ import { GoLink } from "react-icons/go";
 
 const Projects = () => {
   return (
-    <div id="projects" className="pb-20 border-b border-purple-700">
-      {/* Section heading */}
-      <div className="flex justify-start items-center my-10">
-        <h1 className="md:text-2xl text-xl text-slate-100 text-start px-2">
-          Projects
-        </h1>
-        <div className="flex-1 h-[1px] bg-purple-700 mx-4"></div>
+    <div id="projects" className="pb-20">
+      {/* Centered section heading */}
+      <div className="flex justify-center items-center my-10">
+        <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center">Projects</h2>
+      </div>
+      <div className="flex justify-center">
+        <p className="text-slate-400 text-center max-w-2xl mb-8 text-base md:text-lg">
+          Some of the projects that highlight my learning, growth, and love for building.
+        </p>
       </div>
 
-      {/* Projects loop */}
-      {PROJECTS.map((item, index) => {
-        const isEven = index % 2 === 0; // alternate layout
+      {/* Projects grid: image cards with hover overlay */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {PROJECTS.map((item, index) => (
+          <div key={index} className="group rounded-2xl bg-gradient-to-br from-[#0f001a]/70 via-[#140021]/70 to-[#1a0033]/70 border border-purple-700/30 p-3 md:p-4 backdrop-blur-md shadow-lg">
+            {/* Image block with overlay inside */}
+            <div className="relative overflow-hidden rounded-xl">
+              {/* Background glow */}
+              <div className="absolute inset-0 -z-10 rounded-xl blur-2xl bg-gradient-to-br from-purple-500/10 via-fuchsia-500/10 to-pink-500/10"></div>
 
-        return (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-center gap-4 mb-10 ${
-              !isEven ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            {/* Project image with gradient blob */}
-            <div className="relative w-full md:w-1/2 flex justify-center">
-            <div
-          className={`absolute top-1/2 -translate-y-1/2 h-[350px] w-[350px] rounded-full blur-3xl 
-          bg-gradient-to-br from-purple-500/20 via-fuchsia-500/10 to-pink-500/20 
-          ${isEven ? "-left-8" : "-right-8"} pointer-events-none`}  
-        ></div>              <img
+              <img
                 src={item.image}
                 alt={item.name}
                 loading="lazy"
                 decoding="async"
-                className="relative z-10 rounded-xl border-t-8 border-t-purple-600/10 border-r-8 border-r-purple-600/10 shadow-lg transition-transform duration-300 hover:scale-105"
+                className="h-56 w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
                 style={{ contentVisibility: 'auto' }}
               />
-            </div>
 
-            {/* Project text box with gradient background */}
-            <div className="w-full md:w-1/2 bg-gradient-to-br from-[#0f001a]/70 via-[#140021]/70 to-[#1a0033]/70 border border-purple-700/30 p-4 rounded-2xl backdrop-blur-md shadow-lg hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300">
-              <h3 className="text-sm font-medium text-slate-100 mb-2">
-                {item.name}
-              </h3>
-              <p className="text-xs text-slate-400 text-justify mb-2">
-                {item.description}
-              </p>
-
-              {/* Tech stack */}
-              <div className="flex flex-wrap gap-2">
-                {item.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    className=" text-purple-400 text-xs  pb-4 rounded "
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Links */}
-              <div className="flex gap-4">
-               
-                <a
-                  href={item.repository}
-                  target="_blank"
-                  className="text-purple-200 text-xs hover:text-purple-300 "
-                >
-                  <div className="flex gap-1 items-center">
-                  Code
-                 <GoLink className="text-purple-300 text-xs"/>
+              {/* Overlay - slides from above over the image only */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#1a0033]/90 to-[#0a0014]/95 backdrop-blur-sm opacity-0 -translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                <div className="h-full w-full p-4 flex flex-col justify-between">
+                  <div>
+                    <p className="text-slate-300 text-xs line-clamp-4">{item.description}</p>
                   </div>
-                </a>
-                
-                
-                <a
-                  href={item.liveDemo}
-                  target="_blank"
-                  className="text-purple-200 text-xs hover:text-purple-300 "
-                >
-                  <div className="flex gap-1 items-center">
-                    Live
-                 <GoLink className="text-purple-300 text-xs"/>
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {item.technologies.slice(0, 3).map((tech, i) => (
+                        <span key={i} className="text-purple-300 text-[10px]">{tech}</span>
+                      ))}
+                      {item.technologies.length > 3 && (
+                        <span className="text-purple-300 text-[10px]">+{item.technologies.length - 3}</span>
+                      )}
+                    </div>
+                    <div className="flex gap-3">
+                      <a href={item.repository} target="_blank" className="text-purple-200 text-xs hover:text-purple-300 flex items-center gap-1">
+                        Code <GoLink className="text-purple-300 text-xs"/>
+                      </a>
+                      <a href={item.liveDemo} target="_blank" className="text-purple-200 text-xs hover:text-purple-300 flex items-center gap-1">
+                        Live <GoLink className="text-purple-300 text-xs"/>
+                      </a>
+                    </div>
                   </div>
-                </a>
-               
+                </div>
               </div>
             </div>
+
+            {/* Name below image */}
+            <h3 className="mt-3 text-center text-slate-100 text-sm font-medium">{item.name}</h3>
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 };

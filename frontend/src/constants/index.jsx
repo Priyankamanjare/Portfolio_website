@@ -154,8 +154,63 @@ export const SKILLS = [
   { name: "Figma", icon: <FaFigma className="text-2xl md:text-4xl  text-slate-300 " /> },
   { name: "JS", icon: <FaJs className="text-2xl md:text-4xl  text-yellow-300 " /> },
 
-
-
-
 ]
+
+export const achievements = [
+  {
+    id: 1,
+    title: "C++ Certification",
+    description:
+      "Learned C++ fundamentals, OOP concepts, and basic problem-solving.",
+    type: "Certification",
+    icon: "🏅",
+    year: "2025",
+  },
+  {
+    id: 2,
+    title: "SQL Certificate",
+    description:
+      "Gained practical skills in SQL queries, database design, and data management.",
+    type: "Certification",
+    icon: "📊",
+    year: "2025",
+  },
+  {
+    id: 3,
+    title: "JSS, CSS, HTML",
+    description:
+      "Learned core web development skills: HTML structure, CSS styling, and interactive JS features.",
+    type: "Certification",
+    icon: "🌐",
+    year: "2025",
+  },
+  {
+    id: 4,
+    title: "SIH Participation",
+    description:
+      "Contributed to building innovative solutions in a team setting during the SIH event.",
+    type: "Competition",
+    icon: "💻",
+    year: "2024",
+  },
+  {
+    id: 5,
+    title: "Figma",
+    description:
+      "Learned UI/UX design principles and created interactive prototypes using Figma.",
+    type: "Certification",
+    icon: "🎨",
+    year: "2023",
+  },
+  {
+    id: 6,
+    title: "Copyright – LabEquip",
+    description:
+      "Developed the concept for LabEquip: an app that scans lab equipment and provides instant information about each item.",
+    type: "Copyright",
+    icon: "🧪",
+    year: "2023",
+  },
+];
+
 

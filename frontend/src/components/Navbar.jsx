@@ -18,15 +18,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=' bg-clip-padding  flex  border-b  border-purple-600 '>
-      <div className='flex flex-shrink-0 items-center justify-start flex-1'>
-           <h1 className='font-semibold text-4xl text-slate-100 '>Pm</h1>
-      </div>
+    <>
+    <nav className='fixed top-0 left-0 right-0 z-50 w-full bg-[#0f001a]/90 supports-[backdrop-filter]:bg-[#0f001a]/70 backdrop-blur bg-clip-padding px-10 border-b border-purple-700/40 shadow-md flex   '>
+   <div className='flex flex-shrink-0 items-center justify-start flex-1'>
+           <h1 className='text-4xl text-slate-100' style={{ fontFamily: 'Italianno, cursive', fontWeight: 400, letterSpacing: '2px' }}>Priyanka</h1>
+   </div>
       <div className=' m-4 hidden md:flex items-center justify-center space-x-3 flex-1'>
-        <button onClick={() => handleScroll('home')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110'>Home</button>
-        <button onClick={() => handleScroll('skills')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110'>Skills</button>
-        <button onClick={() => handleScroll('projects')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110'>Projects</button>
-        <button onClick={() => handleScroll('contact')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110'>Contact</button>
+        <button onClick={() => handleScroll('home')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Home</button>
+        <button onClick={() => handleScroll('skills')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Skills</button>
+        <button onClick={() => handleScroll('projects')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Projects</button>
+        <button onClick={() => handleScroll('contact')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Contact</button>
+        <button onClick={() => handleScroll('experience')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Experience</button>
+
       </div>
       <div className='flex-1  m-6 flex items-center justify-end space-x-3 relative'>
        
@@ -59,6 +62,8 @@ const Navbar = () => {
         )}
       </div>
     </nav>
+    <div className='h-16 md:h-20'></div>
+    </>
   )
 }
 

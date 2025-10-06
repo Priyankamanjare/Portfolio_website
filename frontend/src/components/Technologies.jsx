@@ -13,34 +13,47 @@ const Technologies = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <div className="relative h-full w-full bg-slate-950">
+      {/* <div className="relative h-full w-full bg-slate-950">
         <div className="absolute bottom-0 left-[-70%] md:left-[-30%] right-0 top-[10%] h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none "></div>
         <div className="absolute bottom-0 right-[-70%] md:right-[-30%] top-[10%] h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"></div>
-      </div>{" "}
-      <div className="flex justify-start items-center my-10 md:my-10">
-        <h1 className="md:text-2xl text-xl  text-slate-100 text-start px-2">Skills</h1>
-        <div className="flex-1 h-[1px] bg-purple-700 mx-4"></div>
+      </div>{" "} */}
+      {/* Centered section heading */}
+      <div className="flex justify-center items-center my-10">
+        <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center">Skills</h2>
       </div>
-      <div className="overflow-x-auto scroll-smooth scrollbar-hide px-4">
-        <div className="flex gap-6 md:gap-10 py-6 md:my-4">
-          {SKILLS.map((skill) => (
-            <div
-              key={skill.name}
-              className=" flex-shrink-0
-                grid grid-row-2 gap-2 p-4 md:p-8 rounded-md
-                bg-gradient-to-br from-[#1a0033] via-[#0d0115] to-[#0f001a] to-75% 
-                border-t-4 border-purple-600/80  
-                transition-transform duration-300 hover:scale-110 shadow-lg hover:shadow-purple-500/40 
-                cursor-pointer"
-            >
-              <div className="flex items-center justify-center">
-                {skill.icon}
-              </div>
-              <div className="text-slate-400 text-xs flex items-center py-2">
-                {skill.name}
-              </div>
+        <div className="flex justify-center">
+          <p className="text-slate-400 text-center max-w-2xl mb-8 text-base md:text-lg">
+            I love experimenting with modern frontend stacks — from clean React UIs to playful animations. Here’s what I’ve been working with lately:
+          </p>
+        </div>
+      <div className="px-4 ">
+        {/* 3D-style black container with title inside */}
+        <div className="relative rounded-2xl bg-black/70 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur p-6  overflow-hidden">
+          {/* subtle glow accents */}
+          <div className="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.18),transparent_60%)]"></div>
+          <div className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.18),transparent_60%)]"></div>
+
+
+          {/* Infinite horizontal scroll for skill badges */}
+          <div className="relative overflow-hidden">
+            <div className="flex gap-6 md:gap-8 animate-marquee whitespace-nowrap my-2">
+              {SKILLS.concat(SKILLS).map((skill, idx) => (
+                <div key={skill.name + idx} className="group inline-block">
+                  <div className="relative flex items-center justify-center">
+                    <div className="rounded-full p-[2px] bg-gradient-to-tr from-purple-600 via-fuchsia-500 to-indigo-600 transition-transform duration-300 group-hover:scale-105">
+                      <div className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#0b0b0b] shadow-[inset_6px_6px_12px_rgba(0,0,0,0.6),inset_-6px_-6px_12px_rgba(80,80,80,0.06)]">
+                        <span className="text-slate-200 text-xs md:text-sm font-medium text-center px-2 leading-snug">
+                          {skill.name}
+                        </span>
+                      </div>
+                    </div>
+                    {/* soft ring on hover */}
+                    <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-60 transition-opacity duration-300 bg-gradient-to-tr from-purple-600/40 via-fuchsia-500/30 to-indigo-600/40"></div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </motion.div>

@@ -4,22 +4,22 @@ import Profile from "./components/Profile";
 import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Achievement from "./components/Achievement";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full md:px-20 px-8 bg-gradient-to-br from-[#160427] via-[#000000] to-[#000000] overflow-hidden">
-      
-      {/* Glow Elements */}
-      <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-fuchsia-950 rounded-full blur-[150px] opacity-40"></div>
-      <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-fuchsia-950 rounded-full blur-[200px] opacity-30"></div>
+    <div className="relative min-h-screen w-full md:px-10 px-8 bg-black overflow-hidden ">
         <Navbar />     
         <Profile />
-        <Experience/>
         <Technologies/>
-        <Projects/>
-        <Contact/>
+        <Experience/>
+  <Projects/>
+  <Achievement/>
+  <Contact/>
+        <Footer/>
       </div>
     
   );
