@@ -6,7 +6,10 @@ dotenv.config();
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://portfolio-website-a7u4.vercel.app/'], 
+  methods: ['GET', 'POST'],
+}));
 app.use(json());
 
 app.post('/contact', async(req, res) => {
@@ -16,18 +19,19 @@ app.post('/contact', async(req, res) => {
         return res.status(400).json({error: "All fields are required"});
     }
 
-    let transporter = createTransport(
-        {
-            service : "gmail",
-            auth: {
-                user : process.env.EMAIL,
-                pass : process.env.PASSWORD
-            }
-        }
-    );
+   let transporter = createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+    }
+});
+
     
     let mailOptions = {
-        from : email,
+        from : process.env.EMAIL,
         to : process.env.EMAIL_USER,
         subject : "New Contact Form Submission",
         text : `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
@@ -37,8 +41,8 @@ app.post('/contact', async(req, res) => {
         console.log("Email sent successfully to:", process.env.EMAIL_USER);
         res.status(200).json({message: "Email sent successfully"});
     } catch (error) {
-        console.error("Error sending email:", error);
-        res.status(500).json({error: "Failed to send email"});
+        console.error("Error sending email:", error.message, error.response);
+        res.status(500).json({error: "Failed to send email", details: error.message});
     }
 })
 
