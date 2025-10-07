@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: ['https://portfolio-website-a7u4.vercel.app/'], 
+  origin: ['https://portfolio-website-a7u4.vercel.app'], 
   methods: ['GET', 'POST'],
 }));
 app.use(json());
