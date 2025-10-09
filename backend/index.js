@@ -54,7 +54,7 @@ app.post('/contact', async (req, res) => {
   try {
     const transporter = createTransport({
       host: 'smtp.gmail.com',
-      port: 465,
+      port: 587,
       secure: true,
       auth: {
         user: process.env.EMAIL,
