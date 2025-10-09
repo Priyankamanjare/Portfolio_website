@@ -16,7 +16,7 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function(origin, callback){
-    if(!origin) return callback(null, true); // Postman or curl
+    if(!origin) return callback(null, true); 
     if(allowedOrigins.includes(origin)){
       callback(null, true);
     } else {
@@ -38,13 +38,16 @@ app.get('/test', (req, res) => {
 
 // Contact route
 app.post('/contact', async (req, res) => {
+  console.log('POST /contact called. Body:', req.body);
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
+    console.log('Validation failed: missing fields');
     return res.status(400).json({ error: "All fields are required" });
   }
 
   if (!process.env.EMAIL || !process.env.PASSWORD || !process.env.EMAIL_USER) {
+    console.log('Server email configuration missing');
     return res.status(500).json({ error: "Server email configuration missing" });
   }
 
@@ -67,9 +70,10 @@ app.post('/contact', async (req, res) => {
     };
 
     await transporter.sendMail(mailOptions);
-
+    console.log('Email sent successfully to:', process.env.EMAIL_USER);
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch (err) {
+    console.error('Error sending email:', err);
     res.status(500).json({ error: 'Failed to send email', details: err.message });
   }
 });
