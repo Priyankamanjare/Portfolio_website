@@ -54,7 +54,7 @@ const Contact = () => {
         setStatus("Message sent! ✅");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to send ❌");
+        setStatus(data?.details || data?.error || "Failed to send ❌");
       }
     } catch (err) {
       console.error(err);
