@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 // ... (CORS setup remains the same)
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://portfolio-website-a7u4.vercel.app',
   credentials: true
 }));
 
