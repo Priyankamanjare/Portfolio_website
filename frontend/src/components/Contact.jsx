@@ -1,14 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
-  const [showNotification, setShowNotification] = useState(false);
 
   // ---- Vanta Setup ----
   const vantaRef = useRef(null);
-  const [vantaEffect, setVantaEffect] = useState(null);
+  const [vantaEffect, setVantaEffect] = React.useState(null);
 
   useEffect(() => {
     if (!vantaEffect) {
@@ -33,36 +30,6 @@ const Contact = () => {
   }, [vantaEffect]);
   // ---------------------
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    setShowNotification(true);
-
-    try {
-      const response = await fetch("https://portfolio-website-w5jl.onrender.com/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        setStatus("Message sent! ✅");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus(data?.details || data?.error || "Failed to send ❌");
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus("Something went wrong!");
-    }
-    setTimeout(() => setShowNotification(false), 7000);
-  };
-
   return (
     <motion.div
       id="contact"
@@ -73,71 +40,45 @@ const Contact = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      {/* Floating Notification */}
-      <AnimatePresence>
-        {showNotification && (
-          <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="fixed top-6 transform -translate-x-1/2 z-50 bg-neutral-900 text-white px-6 py-3 rounded-xl shadow-lg border border-purple-700"
-          >
-            {status}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Contact Content */}
       <div className="relative z-10 flex flex-col justify-center items-center py-14">
         <h1 className="text-2xl text-center my-5 text-slate-300">Get in Touch</h1>
-        <div className="inline-block mx-auto text-center p-5">
-          <h1 className="text-2xl font-bold text-slate-100">Priyanka Vishnu Manjare</h1>
-          <p className="my-3 text-slate-200">priyankamanjare05@gmail.com</p>
-          {/* <p className="underline offset-4 text-slate-200"></p> */}
-          <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left max-w-md mx-auto">
-            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-3 rounded-2xl bg-black text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-700/40 placeholder:text-slate-400 border-none"
-                required
-              />
-            </div>
-            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-3 rounded-2xl bg-black text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-700/40 placeholder:text-slate-400 border-none"
-                required
-              />
-            </div>
-            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full p-3 rounded-2xl bg-black text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-700/40 placeholder:text-slate-400 border-none"
-                rows={4}
-                required
-              />
-            </div>
-            <div className="w-full rounded-2xl p-[2px] bg-gradient-to-br from-purple-900/80 via-fuchsia-900/70 to-pink-900/80">
-              <button
-                type="submit"
-                className="w-full font-semibold p-3 rounded-2xl shadow-lg relative z-10 hover:shadow-purple-500/40 hover:scale-105 transition-transform duration-300 bg-black text-slate-100 border-none"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
+        <div className="inline-block mx-auto  p-6 rounded-2xl bg-black/60 backdrop-blur border border-purple-800/40 shadow-lg max-w-md w-full text-center">
+          <h1 className="text-2xl font-bold text-slate-100 mb-2">Priyanka Vishnu Manjare</h1>
+          
+          <a href="mailto:priyankamanjare05@gmail.com" className="text-slate-100 text-sm underline">priyankamanjare05@gmail.com</a>
+          <p className="mt-4 text-slate-300 text-sm font-medium">Location : Pune, Maharashtra, India</p>
+          
+          <div className="mt-4 grid grid-cols-2 gap-4 mx-auto max-w-fit justify-items-center">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+              LinkedIn
+              <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7"/>
+                <path d="M7 7h10v10"/>
+              </svg>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+              GitHub
+              <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7"/>
+                <path d="M7 7h10v10"/>
+              </svg>
+            </a>
+            <a href="https://leetcode.com/u/priyankamanjare05/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+              LeetCode
+              <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7"/>
+                <path d="M7 7h10v10"/>
+              </svg>
+            </a>
+            <a href="https://www.hackerrank.com/profile/priyankamanjare2" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+              HackerRank
+              <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7"/>
+                <path d="M7 7h10v10"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </motion.div>
