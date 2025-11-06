@@ -57,7 +57,7 @@ const Contact = () => {
                 <path d="M7 7h10v10"/>
               </svg>
             </a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+            <a href="https://github.com/Priyankamanjare/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
               GitHub
               <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7"/>
