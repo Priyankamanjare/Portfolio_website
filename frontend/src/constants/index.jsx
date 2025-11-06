@@ -73,21 +73,21 @@ export const PROJECTS = [
     span:"col-span-3"
   },
    
-  {
-    name: "Weather App",
-    image: project3,
-    description: `A responsive and user-friendly weather application that provides real-time weather updates for any location worldwide. It fetches accurate weather data using an API and displays key details like temperature, humidity, wind speed, and forecasts. The app includes a clean UI with dynamic backgrounds that change based on the current weather conditions.`,
-    technologies: ["React", "TailWindCSS", "OpenWeather API"],
-    features: [
-      "Search functionality by city or zip code",
-      "Temperature conversion (Celsius/Fahrenheit)",
-      "Background changes based on weather conditions",
-      "User-friendly and fully responsive design"
-    ],
-    repository: "https://github.com/Priyankamanjare/Weather-app",
-    liveDemo: "https://weather-app-flax-mu-68.vercel.app/",
-    span:"col-span-3"
-  },
+  // {
+  //   name: "Weather App",
+  //   image: project3,
+  //   description: `A responsive and user-friendly weather application that provides real-time weather updates for any location worldwide. It fetches accurate weather data using an API and displays key details like temperature, humidity, wind speed, and forecasts. The app includes a clean UI with dynamic backgrounds that change based on the current weather conditions.`,
+  //   technologies: ["React", "TailWindCSS", "OpenWeather API"],
+  //   features: [
+  //     "Search functionality by city or zip code",
+  //     "Temperature conversion (Celsius/Fahrenheit)",
+  //     "Background changes based on weather conditions",
+  //     "User-friendly and fully responsive design"
+  //   ],
+  //   repository: "https://github.com/Priyankamanjare/Weather-app",
+  //   liveDemo: "https://weather-app-flax-mu-68.vercel.app/",
+  //   span:"col-span-3"
+  // },
    
   {
     name: "Recipe Finder",
@@ -177,7 +177,7 @@ export const achievements = [
   },
   {
     id: 3,
-    title: "JSS, CSS, HTML",
+    title: "JS, CSS, HTML",
     description:
       "Learned core web development skills: HTML structure, CSS styling, and interactive JS features.",
     type: "Certification",

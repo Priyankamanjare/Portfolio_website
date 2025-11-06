@@ -27,8 +27,9 @@ const Navbar = () => {
         <button onClick={() => handleScroll('home')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Home</button>
         <button onClick={() => handleScroll('skills')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Skills</button>
         <button onClick={() => handleScroll('projects')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Projects</button>
-        <button onClick={() => handleScroll('contact')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Contact</button>
         <button onClick={() => handleScroll('experience')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Experience</button>
+        <button onClick={() => handleScroll('contact')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Contact</button>
+
 
       </div>
       <div className='flex-1  m-6 flex items-center justify-end space-x-3 relative'>
