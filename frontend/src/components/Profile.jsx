@@ -50,7 +50,7 @@ const Profile = () => {
   return (
   <div id="home" ref={vantaRef} className="relative mb-20">
 
-    <div className="relative z-10 mx-auto max-w-7xl px-4 lg:px-12">
+    <div className="relative z-10 mx-auto max-w-7xl px-2 md:px-4 lg:px-12">
       <div className="flex flex-col items-center gap-4 py-8 md:py-12 md:flex-row-reverse lg:gap-16 lg:py-16">
         <motion.div
           className="w-full lg:mt-16 lg:w-1/2 flex justify-center"
@@ -74,7 +74,7 @@ const Profile = () => {
               Hi, I am
             </span>
             <motion.h1
-              className="font-bold tracking-tighter text-4xl lg:text-6xl bg-gradient-to-br from-purple-500/60 via-fuchsia-500/60 to-pink-500/60 bg-clip-text text-transparent text-center lg:text-left py-2 lg:py-4 lg:pr-12  text-wrap break-words"
+              className="font-bold tracking-tighter text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-purple-500/60 via-fuchsia-500/60 to-pink-500/60 bg-clip-text text-transparent text-center lg:text-left py-2 lg:py-4 lg:pr-12  text-wrap break-words"
               style={{ WebkitTextFillColor: 'transparent', color: '#1a0033' }}
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

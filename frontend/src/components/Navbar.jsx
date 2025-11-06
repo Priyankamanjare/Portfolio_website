@@ -47,7 +47,7 @@ const Navbar = () => {
         <button
           type='button'
           aria-label='Open menu'
-          className='md:hidden text-white p-2 rounded-md transition-transform duration-300 hover:scale-110'
+          className='md:hidden text-white p-2 text-right rounded-md transition-transform duration-300 hover:scale-110'
           onClick={() => setMenuOpen((v) => !v)}
         >
           <CgLayoutList className='text-2xl'/>

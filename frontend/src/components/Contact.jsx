@@ -50,28 +50,28 @@ const Contact = () => {
           <p className="mt-4 text-slate-300 text-sm font-medium">Location : Pune, Maharashtra, India</p>
           
           <div className="mt-4 grid grid-cols-2 gap-4 mx-auto max-w-fit justify-items-center">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-slate-100 text-sm underline">
               LinkedIn
               <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7"/>
                 <path d="M7 7h10v10"/>
               </svg>
             </a>
-            <a href="https://github.com/Priyankamanjare/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+            <a href="https://github.com/Priyankamanjare/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-slate-100 text-sm underline">
               GitHub
               <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7"/>
                 <path d="M7 7h10v10"/>
               </svg>
             </a>
-            <a href="https://leetcode.com/u/priyankamanjare05/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+            <a href="https://leetcode.com/u/priyankamanjare05/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-slate-100 text-sm underline">
               LeetCode
               <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7"/>
                 <path d="M7 7h10v10"/>
               </svg>
             </a>
-            <a href="https://www.hackerrank.com/profile/priyankamanjare2" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-blue-500 underline">
+            <a href="https://www.hackerrank.com/profile/priyankamanjare2" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-slate-100 text-sm underline">
               HackerRank
               <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7"/>

@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full md:px-10 px-8 bg-black overflow-hidden ">
+    <div className="relative min-h-screen w-full md:px-10 px-4 bg-black overflow-hidden ">
         <Navbar />     
         <Profile />
         <Technologies/>
