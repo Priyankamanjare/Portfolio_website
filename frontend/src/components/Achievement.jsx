@@ -4,11 +4,11 @@ import { achievements } from "../constants/index.jsx";
 
 const Achievement = () => {
   return (
-    <section id="achievements" className="py-12">
+    <section id="achievements" className="pb-12">
       <div className="max-w-5xl md:mx-10 p-4">
         <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center mb-6">Achievements</h2>
         <div className="flex justify-center">
-          <p className="text-slate-400 text-center max-w-2xl mb-10 text-base md:text-lg">
+          <p className="text-slate-300 text-center max-w-2xl mb-10 text-base md:text-lg">
             Some highlights from my journey — competitions, certifications, and creative projects that shaped my growth.
           </p>
         </div>

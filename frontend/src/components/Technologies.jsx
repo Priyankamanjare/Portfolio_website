@@ -18,11 +18,11 @@ const Technologies = () => {
         <div className="absolute bottom-0 right-[-70%] md:right-[-30%] top-[10%] h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"></div>
       </div>{" "} */}
       {/* Centered section heading */}
-      <div className="flex justify-center items-center my-10">
+      <div className="flex justify-center items-center mb-10">
         <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center">Skills</h2>
       </div>
         <div className="flex justify-center">
-          <p className="text-slate-400 text-center max-w-2xl mb-8 text-base md:text-lg">
+          <p className="text-slate-300 text-center max-w-2xl mb-8 text-base md:text-lg">
             I love experimenting with modern frontend stacks — from clean React UIs to playful animations. Here’s what I’ve been working with lately:
           </p>
         </div>

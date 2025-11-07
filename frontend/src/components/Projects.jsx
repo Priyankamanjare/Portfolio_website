@@ -10,7 +10,7 @@ const Projects = () => {
         <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center">Projects</h2>
       </div>
       <div className="flex justify-center">
-        <p className="text-slate-400 text-center max-w-2xl mb-8 text-base md:text-lg">
+        <p className="text-slate-300 text-center max-w-2xl mb-8 text-base md:text-lg">
           Some of the projects that highlight my learning, growth, and love for building.
         </p>
       </div>

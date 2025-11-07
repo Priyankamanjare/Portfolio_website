@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className=" text-slate-400 py-6">
+    <footer className=" text-slate-300 py-6">
       <div className="max-w-5xl mx-auto  flex-col md:flex-row items-center justify-center gap-6">
         {/* Left: Name & copyright */}
         <div className="text-center ">
