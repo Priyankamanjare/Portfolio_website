@@ -26,8 +26,8 @@ const Navbar = () => {
       <div className=' m-4 hidden md:flex items-center justify-center space-x-3 flex-1'>
         <button onClick={() => handleScroll('home')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Home</button>
         <button onClick={() => handleScroll('skills')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Skills</button>
-        <button onClick={() => handleScroll('projects')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Projects</button>
         <button onClick={() => handleScroll('experience')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Experience</button>
+        <button onClick={() => handleScroll('projects')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Projects</button>
         <button onClick={() => handleScroll('achievements')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Achievements</button>
         <button onClick={() => handleScroll('contact')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Contact</button>
 
@@ -58,8 +58,8 @@ const Navbar = () => {
           <div className='md:hidden absolute top-full right-0 mt-2 w-40 rounded-lg border border-purple-700 bg-[#0f001a] shadow-lg p-2 z-50'>
             <button onClick={() => handleScroll('home')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Home</button>
             <button onClick={() => handleScroll('skills')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Skills</button>
-            <button onClick={() => handleScroll('projects')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Projects</button>
             <button onClick={() => handleScroll('experience')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Experience</button>
+            <button onClick={() => handleScroll('projects')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Projects</button>
             <button onClick={() => handleScroll('achievements')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Achievements</button>
             <button onClick={() => handleScroll('contact')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Contact</button>
           </div>
