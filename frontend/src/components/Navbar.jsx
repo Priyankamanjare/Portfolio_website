@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaAward } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { CgLayoutList } from "react-icons/cg";
 
@@ -29,20 +28,12 @@ const Navbar = () => {
         <button onClick={() => handleScroll('skills')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Skills</button>
         <button onClick={() => handleScroll('projects')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Projects</button>
         <button onClick={() => handleScroll('experience')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Experience</button>
+        <button onClick={() => handleScroll('achievements')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Achievements</button>
         <button onClick={() => handleScroll('contact')} className='bg-transparent text-sm text-slate-100 px-4 py-2 rounded-md  transition-transform duration-300 ease-out hover:scale-110 hover:text-purple-500'>Contact</button>
 
 
       </div>
       <div className='flex-1  m-6 flex items-center justify-end space-x-3 relative'>
-        {/* Achievements button pinned to the extreme right for larger/smaller wide screens */}
-        <button
-          onClick={() => handleScroll('achievements')}
-          aria-label='Achievements'
-          className='hidden sm:inline-flex items-center text-slate-100 px-3 py-2 rounded-md transition-transform duration-200 hover:scale-105 hover:text-purple-500 fixed right-3 top-4 z-50'
-        >
-          <FaAward className='text-lg mr-2'/>
-          <span className='text-sm'>Achievements</span>
-        </button>
        
         <a href='https://github.com/Priyankamanjare' target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
           <FaGithub className='md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
@@ -68,8 +59,9 @@ const Navbar = () => {
             <button onClick={() => handleScroll('home')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Home</button>
             <button onClick={() => handleScroll('skills')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Skills</button>
             <button onClick={() => handleScroll('projects')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Projects</button>
-            <button onClick={() => handleScroll('contact')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Contact</button>
+            <button onClick={() => handleScroll('experience')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Experience</button>
             <button onClick={() => handleScroll('achievements')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Achievements</button>
+            <button onClick={() => handleScroll('contact')} className='w-full text-left text-slate-100 text-sm px-3 py-2 rounded-md hover:bg-purple-900/30'>Contact</button>
           </div>
         )}
       </div>
