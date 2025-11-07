@@ -74,7 +74,7 @@ const Profile = () => {
               Hi, I am
             </span>
             <motion.h1
-              className="font-bold tracking-tighter text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-purple-500/60 via-fuchsia-500/60 to-pink-500/60 bg-clip-text text-transparent text-center lg:text-left py-2 lg:py-4 lg:pr-12  text-wrap break-words"
+              className="font-bold tracking-tighter text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-purple-700/95 via-fuchsia-700/90 to-pink-700/95 md:from-purple-500/70 md:via-fuchsia-500/70 md:to-pink-500/70 bg-clip-text text-transparent text-center lg:text-left py-2 lg:py-4 lg:pr-12  text-wrap break-words"
               style={{ WebkitTextFillColor: 'transparent', color: '#1a0033' }}
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -108,3 +108,4 @@ const Profile = () => {
 };
 
 export default Profile;
+ 

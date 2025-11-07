@@ -49,12 +49,17 @@ const Projects = () => {
                       )}
                     </div>
                     <div className="flex gap-3">
-                      <a href={item.repository} target="_blank" className="text-purple-200 text-xs hover:text-purple-300 flex items-center gap-1">
-                        Code <GoLink className="text-purple-300 text-xs"/>
-                      </a>
-                      <a href={item.liveDemo} target="_blank" className="text-purple-200 text-xs hover:text-purple-300 flex items-center gap-1">
-                        Live <GoLink className="text-purple-300 text-xs"/>
-                      </a>
+                      {item.repository && (
+                        <a href={item.repository} target="_blank" rel="noopener noreferrer" className="text-purple-200 text-xs hover:text-purple-300 flex items-center gap-1">
+                          Code <GoLink className="text-purple-300 text-xs"/>
+                        </a>
+                      )}
+
+                      {item.liveDemo && (
+                        <a href={item.liveDemo} target="_blank" rel="noopener noreferrer" className="text-purple-200 text-xs hover:text-purple-300 flex items-center gap-1">
+                          Live <GoLink className="text-purple-300 text-xs"/>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
