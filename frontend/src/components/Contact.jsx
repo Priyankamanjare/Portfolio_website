@@ -46,11 +46,10 @@ const Contact = () => {
         <div className="inline-block mx-auto  p-6 rounded-2xl bg-black/60 backdrop-blur border border-purple-800/40 shadow-lg max-w-md w-full text-center">
           <h1 className="text-2xl font-bold text-slate-100 mb-2">Priyanka Vishnu Manjare</h1>
           
-          <a href="mailto:priyankamanjare05@gmail.com" className="text-slate-100 text-sm underline">priyankamanjare05@gmail.com</a>
-          <p className="mt-4 text-slate-300 text-sm font-medium">Location : Pune, Maharashtra, India</p>
+          <h3 className="text-slate-100 text-sm underline">priyankamanjare05@gmail.com</h3>
           
           <div className="mt-4 grid grid-cols-2 gap-4 mx-auto max-w-fit justify-items-center">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-slate-100 text-sm underline">
+            <a href="https://www.linkedin.com/in/priyanka-manjare-109195258/" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-1 text-slate-100 text-sm underline">
               LinkedIn
               <svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7"/>

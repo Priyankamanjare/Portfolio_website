@@ -29,7 +29,7 @@ const Projects = () => {
                 alt={item.name}
                 loading="lazy"
                 decoding="async"
-                className="h-56 w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                className="h-56 w-full object-contain rounded-xl transition-transform duration-500 group-hover:scale-105 bg-black/20"
                 style={{ contentVisibility: 'auto' }}
               />
 

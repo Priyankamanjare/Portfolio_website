@@ -91,13 +91,13 @@ const Profile = () => {
               Frontend Developer
             </motion.span>
             <p className="text-slate-300 pt-4 lg:pt-10 lg:ml-1 text-sm text-justify justify-center items-center lg:text-left ">
-              I am a passionate BE-IT student with a keen interest in
+              I am a passionate BE IT student with a keen interest in
               software development. My skills span across frontend development,
               where I craft engaging user interfaces, and UI/UX design, ensuring
-              seamless user experiences. I have hands-on experience with
+              seamless user experiences. I have hands on experience with
               technologies like Node.js and Express for backend development and
               MongoDB for database management. Proficient in C++, I bring a
-              strong problem-solving mindset to every project I undertake.
+              strong problem solving mindset to every project I undertake.
             </p>
           </div>
         </motion.div>

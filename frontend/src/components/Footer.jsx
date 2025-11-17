@@ -12,7 +12,7 @@ const Footer = () => {
           <span className="text-xs md:text-sm">©{new Date().getFullYear()} All rights reserved</span>
         </div>
         {/* Center: Social links */}
-        <div className="flex gap-6 items-center justify-center text-xs md:text-md my-2 md:my-4">
+        {/* <div className="flex gap-6 items-center justify-center text-xs md:text-md my-2 md:my-4">
           <a href="https://github.com/Priyankamanjare" target="_blank" rel="noopener noreferrer" className="hover:text-slate-100 transition-colors">
             <FaGithub size={22} />
           </a>
@@ -20,7 +20,7 @@ const Footer = () => {
             <FaLinkedin size={22} />
           </a>
           
-        </div>
+        </div> */}
         {/* Right: Back to top */}
         <div className="text-center " text-sm md:text-md>
           <a href="#home" className="text-slate-400 hover:text-slate-100 text-xs underline transition-colors">Back to top ↑</a>

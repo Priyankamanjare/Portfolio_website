@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='fixed top-0 left-0 right-0 z-50 w-full bg-[#0f001a]/90 supports-[backdrop-filter]:bg-[#0f001a]/70 backdrop-blur bg-clip-padding px-10 border-b border-purple-700/40 shadow-md flex   '>
+        <nav className='fixed top-0 left-0 right-0 z-50 w-full bg-[#0f001a]/90 supports-[backdrop-filter]:bg-[#0f001a]/70 backdrop-blur bg-clip-padding px-4 md:px-10 border-b border-purple-700/40 shadow-md flex   '>
    <div className='flex flex-shrink-0 items-center justify-start flex-1'>
            <h1 className='text-4xl text-slate-100' style={{ fontFamily: 'Italianno, cursive', fontWeight: 400, letterSpacing: '2px' }}>Priyanka</h1>
    </div>
@@ -36,13 +36,13 @@ const Navbar = () => {
       <div className='flex-1  m-6 flex items-center justify-end space-x-3 relative'>
        
         <a href='https://github.com/Priyankamanjare' target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
-          <FaGithub className='md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
+          <FaGithub className='text-base md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
         </a>
         <a href='https://www.linkedin.com/in/priyanka-manjare-109195258/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
-          <FaLinkedin className='md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
+          <FaLinkedin className='text-base md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
         </a>
         <a href='https://leetcode.com/u/priyankamanjare05/' target='_blank' rel='noopener noreferrer' aria-label='LeetCode'>
-          <SiLeetcode className='md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
+          <SiLeetcode className='text-base md:text-lg brightness-100 text-white transition-transform duration-300 hover:scale-125'/>
         </a>
 
         <button

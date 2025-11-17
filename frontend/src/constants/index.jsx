@@ -31,14 +31,14 @@ export const EXPERIENCES = [
     year: "June 2025 - August 2025",
     role: "SQL Intern",
     company: "Celebal Technologies",
-    description: `Gained hands-on experience in database normalization, indexing, and writing stored procedures and triggers.`,
+    description: `Gained hands on experience in database normalization, indexing, and writing stored procedures and triggers.`,
     technologies: ["SSMS", "SQL"],
   },
   {
     year: "2025",
     role: " AI: Transformative Learning with TechSaksham",
     company: "TechSaksham",
-    description: `Built a healthcare-focused chatbot by integrating a Hugging Face pre-trained language model using Python.`,
+    description: `Built a healthcare focused chatbot by integrating a Hugging Face pre trained language model using Python.`,
     technologies: ["Huggingface", "Python"],
   },
   {
@@ -61,7 +61,7 @@ export const PROJECTS = [
   {
     name: "Flavorly",
     image: Flavorly,
-    description: `Flavorly is a modern, responsive food ordering platform designed to provide users with a smooth and intuitive experience for browsing restaurants and placing orders online. The platform focuses on clean UI, fast navigation, and real-time order updates to enhance the overall food ordering experience.`,
+    description: `Flavorly is a modern, responsive food ordering platform designed to provide users with a smooth and intuitive experience for browsing restaurants and placing orders online.`,
     technologies: ["React", "Tailwind CSS", "Appwrite"],
     features: [
       "Show categories (Starters, Main Course, Desserts, Drinks) with images and prices.",
@@ -92,7 +92,7 @@ export const PROJECTS = [
   {
     name: "Recipe Finder",
     image: Recipe,
-    description: `Recipe Finder helps you discover delicious recipes by simply searching with ingredients. Browse detailed instructions, ingredients, and images — making cooking easy and fun.`,
+    description: `Recipe Finder helps you discover delicious recipes by simply searching with ingredients. Browse detailed instructions, ingredients, and images, making cooking easy and fun.`,
     technologies: ["React", "TailWindCSS", "TheMealDB API"],
     features: [
       "Search Recipes by Name – Enter any dish name and instantly get matching recipes.",
@@ -121,7 +121,7 @@ export const PROJECTS = [
   {
     name: "UI/UX Landing Page for Project Building Company",
     image: project4,
-    description: `A visually appealing and professional landing page designed for a project-building company, showcasing their services and portfolio.`,
+    description: `A visually appealing and professional landing page designed for a project building company, showcasing their services and portfolio.`,
     technologies: ["Figma", "HTML", "CSS"],
     features: [
       "Responsive layout",
@@ -161,7 +161,7 @@ export const achievements = [
     id: 1,
     title: "C++ Certification",
     description:
-      "Learned C++ fundamentals, OOP concepts, and basic problem-solving.",
+      "Learned C++ fundamentals, OOP concepts, and basic problem solving.",
     type: "Certification",
     icon: "🏅",
     year: "2025",

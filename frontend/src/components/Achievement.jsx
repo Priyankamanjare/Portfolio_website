@@ -9,7 +9,7 @@ const Achievement = () => {
         <h2 className="text-slate-300 text-3xl md:text-4xl font-bold text-center mb-6">Achievements</h2>
         <div className="flex justify-center">
           <p className="text-slate-300 text-center max-w-2xl mb-10 text-base md:text-lg">
-            Some highlights from my journey — competitions, certifications, and creative projects that shaped my growth.
+            Some highlights from my journey competitions, certifications, and creative projects that shaped my growth.
           </p>
         </div>
         <div className="relative rounded-2xl bg-black/70 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur px-2 py-4  md:py-8 md:px-10 overflow-hidden ">

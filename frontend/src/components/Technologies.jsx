@@ -23,7 +23,7 @@ const Technologies = () => {
       </div>
         <div className="flex justify-center">
           <p className="text-slate-300 text-center max-w-2xl mb-8 text-base md:text-lg">
-            I love experimenting with modern frontend stacks — from clean React UIs to playful animations. Here’s what I’ve been working with lately:
+            I love experimenting with modern frontend stacks from clean React UIs to playful animations. Here’s what I’ve been working with lately:
           </p>
         </div>
       <div className="">

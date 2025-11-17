@@ -34,7 +34,7 @@ const Experience = () => {
       </div>
       <div className="flex justify-center">
         <p className="text-slate-300 text-center max-w-2xl mb-8 text-base md:text-lg">
-          A glimpse into my journey — where I’ve learned, built, and grown through real-world projects and hands-on development experiences.
+          A glimpse into my journey where I’ve learned, built, and grown through real world projects and hands on development experiences.
         </p>
       </div>
 
